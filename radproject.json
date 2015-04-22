@@ -2,7 +2,9 @@
     "name": "todomatirialize",
     "application": null,
     "libs": {},
-    "view": {},
+    "view": {
+        "main": "d:\\project\\html\\todomaterialize\\source\\views\\main"
+    },
     "model": {},
     "service": {},
     "screen": {},

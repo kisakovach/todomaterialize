@@ -4,6 +4,8 @@
     
     var scripts = [
         
+        "source/views/main/main.js",
+        
         "source/application/application.js"
     ];
     // #script_end#
