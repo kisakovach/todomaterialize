@@ -1,0 +1,72 @@
+
+
+#screen {
+ width:100%;
+ border:2px solid black;
+ min-height: 400px;
+ min-width: 300px;
+ height: 100%;
+ overflow: hidden;
+}
+
+.footer-page nav {
+ width:100%;
+ position:fixed;
+ bottom: 0;
+ left:0;
+ border: 1px solid black;
+ border-width: 1px 2px 2px 2px;
+}
+
+.header-page nav {
+
+ width:100%;
+ position:fixed;
+ top: 0;
+ left:0;
+ border: 1px solid black;
+ border-width: 2px 2px 1px 2px;
+
+}
+
+.button-panel {
+	display:table;
+	width: 96%;
+	height:98%;
+	margin: auto;
+	text-align: center;
+}
+
+.btn {
+
+ background-color:white;
+ color:black;
+ border:2px solid black;
+
+}
+
+.btn-group {
+        display: table-cell;
+}
+
+.btn-group .btn {
+	border-width: 2px 1px 2px 1px;
+	padding:0px;
+	border-radius: 0px;
+	margin: 0px;
+	width:100%;
+	height:100%
+}
+
+ .button-panel .btn-group:first-child .btn {
+
+	border-width: 2px 1px 2px 2px;
+	border-radius:10px 0px 0px 10px;
+
+}
+
+.button-panel .btn-group:last-child .btn {
+   border-width: 2px 2px 2px 1px;
+   border-radius:0px 10px 10px 0px;
+
+}

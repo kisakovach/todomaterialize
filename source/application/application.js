@@ -2,7 +2,7 @@ RAD.application(function (core) {
     var app = this;
 
     app.start = function () {
-        alert('Hello world!');
+       // alert('Hello world!');
 
 // to add your first view - run "rad add view view.main" from the root of this project
 // you can use the code below to show your first view
