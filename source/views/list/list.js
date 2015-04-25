@@ -1,10 +1,13 @@
-RAD.view("screen.main", RAD.Blanks.View.extend({
+RAD.view("main.list", RAD.Blanks.ScrollableView.extend({
 
-    url: 'source/views/main/main.html',
-/*
+    model: RAD.models.tasks,
+    url: 'source/views/list/list.html',
+
     onInitialize: function () {
         
     },
+
+/*
     onNewExtras: function (extras) {
         
     },
@@ -33,26 +36,5 @@ RAD.view("screen.main", RAD.Blanks.View.extend({
         
     }
 */
-
-    events: {
-
-        "click #list-btn": "OnList",
-        "click #add-btn": "OnAdd",
-
-    },
-
-    OnList: function (e) {
-        // body...
-        this.application.list();
-        this.publish("app.list",{b:"list tabed"});
-
-    },
-    
-    OnAdd: function (e) {
-        // body...
-        this.application.add();
-        this.publish("app.sdd",{b:"add tabed"});
-
-    }
 
 }));

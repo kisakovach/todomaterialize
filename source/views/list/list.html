@@ -1,0 +1,8 @@
+<div class="scroll-view-body" data-tmplate>
+<ul>
+	{{# _(model).each(function(task){ }}
+	<li><span>{{ task.title }}</span><span> {{ task.text }}</span><span> {{ task.deadline }}</span></li>
+	{{#  }); }}
+</ul>
+
+</div>

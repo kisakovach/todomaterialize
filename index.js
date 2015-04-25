@@ -4,7 +4,19 @@
     
     var scripts = [
         
+        "source/models/task/task.js",
+        
+        "source/models/tasks/tasks.js",
+        
+        "source/service/tasks.loader/tasks.loader.js",
+        
+        "source/views/add/add.js",
+        
+        "source/views/list/list.js",
+        
         "source/views/main/main.js",
+        
+        "source/views/screen.load/screen.load.js",
         
         "source/application/application.js"
     ];

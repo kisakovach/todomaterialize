@@ -3,11 +3,23 @@
     "application": null,
     "libs": {},
     "view": {
-        "main": "d:\\project\\html\\todomaterialize\\source\\views\\main"
+        "main": "d:\\project\\html\\todomaterialize\\source\\views\\main",
+        "add": "D:\\project\\html\\todomaterialize\\source\\views\\add",
+        "screen.load": "d:\\project\\html\\todomaterialize\\source\\views\\screen.load"
     },
-    "model": {},
-    "service": {},
+    "model": {
+        "task": "D:\\project\\html\\todomaterialize\\source\\models\\task"
+    },
+    "service": {
+        "tasks.loader": "D:\\project\\html\\todomaterialize\\source\\service\\tasks.loader"
+    },
     "screen": {},
     "external": {},
-    "links": {}
+    "links": {},
+    "scrollable": {
+        "list": "D:\\project\\html\\todomaterialize\\source\\views\\list"
+    },
+    "collection": {
+        "tasks": "D:\\project\\html\\todomaterialize\\source\\models\\tasks"
+    }
 }

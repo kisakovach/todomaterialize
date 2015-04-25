@@ -1,6 +1,6 @@
-RAD.view("screen.main", RAD.Blanks.View.extend({
+RAD.view("screen.load", RAD.Blanks.View.extend({
 
-    url: 'source/views/main/main.html',
+    url: 'source/views/screen.load/screen.load.html',
 /*
     onInitialize: function () {
         
@@ -33,26 +33,5 @@ RAD.view("screen.main", RAD.Blanks.View.extend({
         
     }
 */
-
-    events: {
-
-        "click #list-btn": "OnList",
-        "click #add-btn": "OnAdd",
-
-    },
-
-    OnList: function (e) {
-        // body...
-        this.application.list();
-        this.publish("app.list",{b:"list tabed"});
-
-    },
-    
-    OnAdd: function (e) {
-        // body...
-        this.application.add();
-        this.publish("app.sdd",{b:"add tabed"});
-
-    }
 
 }));

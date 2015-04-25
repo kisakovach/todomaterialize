@@ -9,8 +9,36 @@
  overflow: hidden;
 }
 
+
+.preloader-wrapper{
+
+	margin-top:50%;
+}
+
+
+
+/* ---- botoom footer buttons ----*/
+
+
+.header-page nav {
+ width:100%;
+ position:fixed;
+ top: 0;
+ left:0;
+ border: 1px solid black;
+ border-width: 2px 2px 1px 2px;
+ height: 5em;
+ line-height: 4.5em;
+}
+
+/* ---- end ---- */
+
+/* ---- botoom footer buttons ----*/
+
 .footer-page nav {
  width:100%;
+ height: 5em;
+ line-height: 4.5em;
  position:fixed;
  bottom: 0;
  left:0;
@@ -18,21 +46,10 @@
  border-width: 1px 2px 2px 2px;
 }
 
-.header-page nav {
-
- width:100%;
- position:fixed;
- top: 0;
- left:0;
- border: 1px solid black;
- border-width: 2px 2px 1px 2px;
-
-}
 
 .button-panel {
 	display:table;
 	width: 96%;
-	height:98%;
 	margin: auto;
 	text-align: center;
 }
@@ -46,7 +63,7 @@
 }
 
 .btn-group {
-        display: table-cell;
+ display: table-cell;
 }
 
 .btn-group .btn {
@@ -54,19 +71,32 @@
 	padding:0px;
 	border-radius: 0px;
 	margin: 0px;
-	width:100%;
-	height:100%
+	width: 100%;
+	height: 80%
 }
 
  .button-panel .btn-group:first-child .btn {
 
 	border-width: 2px 1px 2px 2px;
-	border-radius:10px 0px 0px 10px;
+	border-radius:15px 0px 0px 15px;
 
 }
 
 .button-panel .btn-group:last-child .btn {
    border-width: 2px 2px 2px 1px;
-   border-radius:0px 10px 10px 0px;
+   border-radius:0px 15px 15px 0px;
 
 }
+
+/* ---- end ----*/
+
+/* ---- main ----*/
+
+#main {
+
+	     position: absolute;
+	     width:100%;
+	     top: 5em;
+	     bottom: 5em;
+	     text-align: center;  
+	}
