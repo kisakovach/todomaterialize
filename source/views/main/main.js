@@ -43,13 +43,15 @@ RAD.view("screen.main", RAD.Blanks.View.extend({
 
     OnList: function (e) {
         // body...
-        this.application.list();
+        //$("#main").html("");
+	this.application.list();
         this.publish("app.list",{b:"list tabed"});
 
     },
     
     OnAdd: function (e) {
         // body...
+	//$("#main").html("");
         this.application.add();
         this.publish("app.sdd",{b:"add tabed"});
 

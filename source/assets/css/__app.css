@@ -17,7 +17,7 @@
 
 
 
-/* ---- botoom footer buttons ----*/
+/* ---- upper header buttons ----*/
 
 
 .header-page nav {
@@ -30,6 +30,43 @@
  height: 5em;
  line-height: 4.5em;
 }
+
+.up-btn {
+	 font-weight: bold;
+	 background: none;      
+	 border:2px solid black;
+	 border-left-style:none;
+	 border-radius:5px; 
+	 margin-left:20px;
+	 margin-top:6px;
+	 margin-bottom: 6px;
+	 padding: 5px 2px;	
+}
+
+.up-btn:hover{
+
+       	border-color: black;
+       	background:none;  
+
+        }
+
+
+.up-btn:before {
+        background: none;        
+        position: absolute;
+        margin-left:-15px;
+        margin-top:-3px;
+	content:"";
+	width:30px;
+	height:30px;
+	transform: rotate(45deg); 
+	-moz-transform: rotate(45deg);
+	border-left:2px solid black;
+	border-bottom:2px solid black;
+	border-radius:5px;
+	z-index:-1;
+}
+
 
 /* ---- end ---- */
 
@@ -89,6 +126,59 @@
 }
 
 /* ---- end ----*/
+
+/* ---- add view ----*/
+.add-task {
+
+  margin-top: 3em;
+
+}
+
+.input-grp .input-field{
+ 
+ width:80%;
+
+}
+
+
+/* ---- end ----*/
+
+
+/* ---- list ----*/
+
+.table-bordered {
+  border: 2px solid #000;
+}
+
+
+
+
+
+tr,tbody {
+  border: 1px solid #000;
+}
+
+tr.completed{
+    text-decoration:line-through;
+}
+
+
+td {
+ padding:5px 5px;	
+
+}
+
+[type="checkbox"] + label {
+
+ padding-left: 10px;
+ height: 1.2em;
+
+}
+
+
+/* ---- end ----*/
+
+
 
 /* ---- main ----*/
 

@@ -1,6 +1,17 @@
+RAD.utils.fromJSON=function(taskJSON){
+	  taskJSON.deadline = new Date (taskJSON.deadline)
+};
+
+RAD.utils.cropdate= function(task){
+ date = task.get("deadline");
+ return new Date(date.getFullYear(),date.getMonth(),
+        date.getDate());	
+}
+
+
 RAD.application(function (core) {
     var app = this;
-
+			
     app.start = function () {
        // alert('Hello world!');
 
@@ -14,11 +25,17 @@ RAD.application(function (core) {
        
        core.startAll();
        core.publish("tasks.loader.load",{
-        file: "source/external/tasks.json" ,
+        file: "source/external/tasks.json",
         loader: false,
         callback: function(data){
-            RAD.model("tasks").set(data);
-        }});
+           
+          _(data).each(function(task){
+	   RAD.utils.fromJSON(task);	
+	   RAD.model("tasks").add(task);
+	 });
+	   
+        }
+       });
        core.publish('navigation.show', options);
 
     };
