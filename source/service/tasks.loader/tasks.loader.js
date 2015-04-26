@@ -6,9 +6,9 @@ RAD.service("tasks.loader", RAD.Blanks.Service.extend({
     .done(function(data){
         console.log(new Date() + "dialog close");
         service.publish("navigation.dialog.close",{ container_id:"#screen",
-                                             	    content:"screen.load"
-	});
-     }) 
+                                             	       content:"screen.load"
+	                                                 });
+     }); 
    },
    
    
@@ -19,15 +19,14 @@ RAD.service("tasks.loader", RAD.Blanks.Service.extend({
    },
    
    loadFromLocal: function(){
-       if(localStorage.getItem("tasks")!="undefine"){
-        
+       if(localStorage.getItem("tasks")!=null){
          var jsonTasks =  JSON.parse(localStorage.getItem("tasks"));
-	_(jsonTasks).each(RAD.utils.fromJSON);
-	RAD.model("tasks").set();
-	return true;
-	} else {
-	 return false;
-	}
+	       _(jsonTasks).each(RAD.utils.fromJSON);
+	       RAD.model("tasks").set(jsonTasks);
+	       return true;
+	     } else {
+	       return false;
+	     }
    },	
    	 
    onReceiveMsg: function (channel, data) {
@@ -35,26 +34,26 @@ RAD.service("tasks.loader", RAD.Blanks.Service.extend({
         var msg = channel.split(".");
         switch(msg[msg.length-1]){
             case "load" : 
-               if(!this.loadFromLocal()){ 
-		if(!data.loader){
+               if(!this.loadFromLocal()){
+                 if(!data.loader){
                     console.log(new Date()+" is loaded");
                     this.publish("navigation.dialog.show",{ container_id:"#screen",
                                                             content:"screen.load",
-							    animation:"fade"
-                                                        });
-		};
+							                                              animation:"fade"
+                                                          });
+		            };
                 this._getJSON(data.file,data.callback);
-               };
-	    case "addtask" : 
-		if(data.id_task=="undefine"){
-		 RAD.model("tasks").add(data.model);
-		} else {
-		 //RAD.model("tasks").get(data.id_task).set(data.model);
-		}
-		this.saveToLocal();
-	    case "changetask":
-		this.saveToLocal();   
-	    break;
-        }    
+              };
+      	    case "addtask" : 
+      		    if(data.id_task==null){
+      		      RAD.model("tasks").add(data.model);
+      		    } else {
+      		      //RAD.model("tasks").get(data.id_task).set(data.model);
+      		    }
+      		    this.saveToLocal();
+      	    case "changetask":
+      		    this.saveToLocal();   
+      	    break;
+        };    
     }
 }));

@@ -1,4 +1,4 @@
-RAD.utils.fromJSON=function(taskJSON){
+RAD.utils.fromJSON = function(taskJSON){
 	  taskJSON.deadline = new Date (taskJSON.deadline)
 };
 
@@ -23,16 +23,17 @@ RAD.application(function (core) {
             animation: 'none'
         };
        
-       core.startAll();
-       core.publish("tasks.loader.load",{
+        core.startAll();
+        core.publish("tasks.loader.load",{
         file: "source/external/tasks.json",
         loader: false,
         callback: function(data){
-           
-          _(data).each(function(task){
-	   RAD.utils.fromJSON(task);	
-	   RAD.model("tasks").add(task);
-	 });
+           _(data).each(function(task){
+	         console.log(task);
+             RAD.utils.fromJSON(task);	
+	         console.log(task);
+             RAD.model("tasks").add(task);
+	       });
 	   
         }
        });
