@@ -17,6 +17,13 @@ RAD.view("main.add", RAD.Blanks.View.extend({
 	
      this.publish("tasks.loader.addtask",{model:m});
        
+    },
+
+    onEndRender: function () {
+     this.$(".datepicker").pickadate({
+	  selectMonths:true,
+	  selectYears: 15
+	});   
     }	
 	
 /*
@@ -29,9 +36,7 @@ RAD.view("main.add", RAD.Blanks.View.extend({
     onStartRender: function () {
         
     },
-    onEndRender: function () {
-        
-    },
+    
     onBeforeAttach: function(){
 
     },
